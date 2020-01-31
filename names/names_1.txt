@@ -275,7 +275,10 @@ Gia Colon
 Chase Benson
 Moses Wise
 Regan Boone
-Jovani Page
+Jovani Pagefor name in names_1[1:]:
+#     print(name)
+#     bst.insert(name)
+#     print("INSERTED")
 Landon Gilmore
 Mikaela Allen
 Katelyn Cannon
