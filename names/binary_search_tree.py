@@ -11,11 +11,11 @@ class BinarySearchTree:
         current_node = self
         new_node_tree = None
         while True:
-            if value < current_node.value and current_node.left is not None:
+            if value <= current_node.value and current_node.left is not None:
                 current_node = current_node.left
-            elif value > current_node.value and current_node.right is not None:
+            elif value >= current_node.value and current_node.right is not None:
                 current_node = current_node.right
-            elif value < current_node.value and current_node.left is None:
+            elif value <= current_node.value and current_node.left is None:
                 current_node.left = BinarySearchTree(value)
                 new_node_tree = current_node.left
                 break

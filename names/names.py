@@ -13,26 +13,24 @@ f.close()
 duplicates = []
 
 # runtime for the old code is O(n^2) or O(n)
-for name_1 in names_1:
-    for name_2 in names_2:
-        if name_1 == name_2:
-            duplicates.append(name_1)
+# for name_1 in names_1:
+#     for name_2 in names_2:
+#         if name_1 == name_2:
+#             duplicates.append(name_1)
 
-# bst = BinarySearchTree(names_1[0])
+bst = BinarySearchTree(names_1[0])
 # for name in names_1[1:]:
 #     print(name)
 #     bst.insert(name)
 #     print("INSERTED")
 # for name in names_1[1:]:
 #     print(name)
-# names_i = 1
-# while names_i <= len(names_1[1:]):
-#     print(names_1[names_i])
-#     bst.insert(names_1[names_i])
-#     print("INSERTED")
-#     names_i += 1
+names_i = 1
+while names_i <= len(names_1[1:]):
+    bst.insert(names_1[names_i])
+    names_i += 1
 
-# duplicates = [duplicate for duplicate in names_2 if bst.contains(duplicate)]
+duplicates = [duplicate for duplicate in names_2 if bst.contains(duplicate)]
 
 end_time = time.time()
 print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
